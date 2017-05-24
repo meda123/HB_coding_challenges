@@ -20,31 +20,31 @@ def binary_search(val):
 
     >>> binary_search(31) <= 7
     True
-
-    >>> max([binary_search(i) for i in range(1, 101)])
-    7 
-
     """
 
-    rand_num = random.randint(0, 100)
-    guesses = 0
+    assert 0 < val < 101, "Val must be between 1-100"
 
-    #count guesses 
+    num_guesses = 0
 
-    while val is not rand_num:
-        if val is < rand_num:
-            print "Guess higher"
+    # START SOLUTION #
 
+    higher_than = 0
+    lower_than = 101
+    guess = None
 
-    # i = 0 
+    while guess != val:
+        num_guesses += 1
+        guess = (lower_than - higher_than) / 2 + higher_than
 
-    # while i is not val:
-    #     for i in range(1, 100):
-    #         if i == val:
-    #             return      
+        if val > guess:
+            higher_than = guess
 
+        elif val < guess:
+            lower_than = guess
 
-binary_search(5)
+    # END SOLUTION
+
+    return num_guesses
 
 
 ##################### DocTests ###########################################
