@@ -1,13 +1,8 @@
-
 """
-Binary search is one of the most important Computer Science algorithms. 
-It allows you to search a sorted list in O(log n) time, a large improvement 
-over scanning every item in the list (which would be O(n) time).
-
-In this challenge, you’ll make binary search for the classic children’s guessing
-game of “pick a number from 1 to 100”.
-
+BST concept test: make a binary search for a children's guessing game, guessing 
+a number between 1-100. 
 """
+import random 
 
 def binary_search(val):
     """
@@ -31,16 +26,25 @@ def binary_search(val):
 
     """
 
-    guess = 
-    i = 0 
+    rand_num = random.randint(0, 100)
+    guesses = 0
 
-    while i is not val:
-        for i in range(1, 100):
-            if i == val:
-                return      
+    #count guesses 
+
+    while val is not rand_num:
+        if val is < rand_num:
+            print "Guess higher"
 
 
+    # i = 0 
 
+    # while i is not val:
+    #     for i in range(1, 100):
+    #         if i == val:
+    #             return      
+
+
+binary_search(5)
 
 
 ##################### DocTests ###########################################
