@@ -2,12 +2,9 @@
 BST concept test: make a binary search for a children's guessing game, guessing 
 a number between 1-100. 
 """
-import random 
 
 def binary_search(val):
-    """
-    Function returns number of guesses after trying to find val (the number you
-    are trying to guess between 1-100)
+    """Using binary search, find val in range 1-100. Return # of guesses.
 
     >>> binary_search(50)
     1
@@ -20,6 +17,10 @@ def binary_search(val):
 
     >>> binary_search(31) <= 7
     True
+
+    >>> max([binary_search(i) for i in range(1, 101)])
+    7
+
     """
 
     assert 0 < val < 101, "Val must be between 1-100"
@@ -47,14 +48,8 @@ def binary_search(val):
     return num_guesses
 
 
-##################### DocTests ###########################################
-
-if __name__ == "__main__":
+if __name__ == '__main__':
     import doctest
-
-    print
-    result = doctest.testmod()
-    if not result.failed:
-        print "ALL TESTS PASSED. GOOD WORK!"
-    print
+    if doctest.testmod().failed == 0:
+        print "\n*** ALL TESTS PASSED. YOU'RE TERRIFIC AT THIS!\n"
 
