@@ -56,10 +56,16 @@ if __name__ == '__main__':
 
 
 """ 
-In human  
+In human words, what is this algorithm doing? 
 
+    SUMMARY: Loop through a given string (astring) and find the item
+            on which the string should be split (splitter) using the 
+            find method. Append to a new string (result) as long as you
+            don't return -1. 
 
-
+            Note:The find method searches through a string and looks for a 
+            particular item (in this case the splitter), and returns the index
+            at which the item is found OR -1 if it's not found. 
 """
 
 
