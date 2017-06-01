@@ -28,8 +28,27 @@ For example:
 def split(astring, splitter):
     """Split astring by splitter and return list of splits."""
 
+    result = []
+    index = 0 
 
 if __name__ == '__main__':
     import doctest
     if doctest.testmod().failed == 0:
-        print "\n*** ALL TESTS PASSED. FINE SPLITTING!\n"
+        print "\n*** All Tests Passed. Way to split!\n"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
