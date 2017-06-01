@@ -31,6 +31,23 @@ def split(astring, splitter):
     result = []
     index = 0 
 
+    while index <= len(astring):
+
+        current_index = index
+        index = astring.find(splitter, index)
+
+        if index != -1: 
+            result.append(astring[current_index: index])
+            index += len(splitter)
+        else: 
+            # If other instances of splitter not found 
+            result.append(astring[current_index:])
+            break 
+
+    return result 
+
+
+
 if __name__ == '__main__':
     import doctest
     if doctest.testmod().failed == 0:
@@ -38,9 +55,12 @@ if __name__ == '__main__':
 
 
 
+""" 
+In human  
 
 
 
+"""
 
 
 
